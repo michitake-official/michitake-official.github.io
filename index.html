@@ -1,173 +1,332 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>一般社団法人 michitake — 心も身体も満ちて長ける</title>
-<meta name="description" content="一般社団法人michitakeは、青少年の自立支援を目的に、陸上教室・運動プログラムを通じた支援活動を行っています。">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>一般社団法人 michitake — 心も身体も、満ちて長ける。</title>
+<meta name="description" content="一般社団法人michitakeは、青少年の自立支援を目的に、陸上教室・運動プログラムを通じた支援活動を行っています。" />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@500;700;900&family=Bebas+Neue&display=swap" rel="stylesheet" />
+
+  <meta name="keywords" content="michitake,一般社団法人michitake,陸上,児童養護施設,青少年支援,スポーツ,心理,自立支援" />
+  <meta name="author" content="一般社団法人 michitake" />
+  <meta name="theme-color" content="#239dda" />
+  <link rel="canonical" href="https://michitake-official.github.io/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://michitake-official.github.io/" />
+  <meta property="og:title" content="一般社団法人 michitake — 心も身体も、満ちて長ける。" />
+  <meta property="og:description" content="陸上教室・運動プログラムを通じて、困難を抱える青少年の自立を支えます。スポーツ × 心理 × 福祉の統合的アプローチで。" />
+  <meta property="og:image" content="https://michitake-official.github.io/assets/ogp.png" />
+  <meta property="og:site_name" content="一般社団法人 michitake" />
+  <meta property="og:locale" content="ja_JP" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="一般社団法人 michitake — 心も身体も、満ちて長ける。" />
+  <meta name="twitter:description" content="陸上教室・運動プログラムを通じて、困難を抱える青少年の自立を支えます。" />
+  <meta name="twitter:image" content="https://michitake-official.github.io/assets/ogp.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="apple-touch-icon" href="assets/logo.png" />
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NGO",
+    "name": "一般社団法人 michitake",
+    "alternateName": "michitake",
+    "url": "https://michitake-official.github.io/",
+    "logo": "https://michitake-official.github.io/assets/logo.png",
+    "image": "https://michitake-official.github.io/assets/ogp.png",
+    "description": "陸上教室・運動プログラムを通じて、困難を抱える青少年の自立を支える一般社団法人。",
+    "foundingDate": "2024-12",
+    "email": "michiru-takeru@michitake.com",
+    "sameAs": [
+      "https://www.instagram.com/michitake_official/"
+    ],
+    "areaServed": "JP",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "JP"
+    }
+  }
+  </script>
+
+  <!-- Google Analytics 4 (GA_MEASUREMENT_ID をご自身のIDに差し替えてください) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
 <!-- NAV -->
-<nav>
+<nav class="nav">
   <a href="#" class="nav-logo">
-    <img src="assets/logo.png" alt="michitake">
+    <img src="assets/logo.png" alt="michitake" />
+    <span class="ko">一般社団法人</span>
   </a>
   <ul class="nav-links">
-    <li><a href="#about">michitakeとは</a></li>
-    <li><a href="#activities">活動内容</a></li>
-    <li><a href="#profile">代表</a></li>
-    <li><a href="#contact">お問い合わせ</a></li>
+    <li><a href="#about"><span class="num">01</span>About</a></li>
+    <li><a href="#activities"><span class="num">02</span>Activities</a></li>
+    <li><a href="#profile"><span class="num">03</span>Members</a></li>
+    <li><a href="#instagram"><span class="num">04</span>Instagram</a></li>
+    <li><a href="#contact"><span class="num">05</span>Contact</a></li>
   </ul>
-</nav>
+  <button class="hamburger" id="hamburger" aria-label="menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about"><span class="num">01</span>michitakeとは</a>
+  <a href="#activities"><span class="num">02</span>活動内容</a>
+  <a href="#profile"><span class="num">03</span>代表 / メンバー</a>
+  <a href="#instagram"><span class="num">04</span>Instagram</a>
+  <a href="#contact"><span class="num">05</span>お問い合わせ</a>
+  <div class="small">— michitake / Est. 2024.12 —</div>
+</div>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-dots"></div>
-  <div class="hero-inner">
-    <img src="assets/logo.png" alt="michitake" class="hero-logo">
-    <h1 class="hero-copy">
-      心も身体も、<span class="accent">満ちて長ける。</span>
-    </h1>
-    <p class="hero-sub">
-      陸上教室・運動プログラムを通じて、<br>
-      困難を抱える青少年の自立を支えます。
-    </p>
-    <a href="#about" class="hero-btn">michitakeを知る →</a>
+  <div class="lanes"></div>
+  <div class="hero-meta">
+    <div>
+      michitake<br/>
+      <span style="opacity:.5">一般社団法人</span>
+    </div>
+    <div class="right">
+      EST. 2024.12<br/>
+      <span class="accent">FY 2025 / 26</span>
+    </div>
+  </div>
+  <h1 class="reveal">
+    <span class="small">Mind &amp; Body — Filled to Grow.</span>
+    心も身体も、<br/><span class="em">満ちて長ける。</span>
+  </h1>
+  <p class="hero-sub reveal d1">
+    陸上教室・運動プログラムを通じて、<br/>
+    困難を抱える青少年の自立を支えます。<br/>
+    スポーツ × 心理 × 福祉の統合的アプローチで。
+  </p>
+  <div class="hero-actions reveal d2">
+    <a href="#about" class="btn btn-primary">michitakeを知る<span class="arrow">→</span></a>
+    <a href="#activities" class="btn btn-ghost">活動を見る<span class="arrow">→</span></a>
+  </div>
+  <div class="hero-foot">
+    <div>SCROLL <span class="line"></span></div>
+    <div>NPO / RUNNING / WELFARE</div>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section class="sec bg" id="about">
-  <div class="sec-inner">
-    <div class="sec-label">About</div>
-    <h2 class="sec-title">michitakeとは</h2>
-    <div class="about-body">
-      <p>一般社団法人michitakeは、2024年12月に設立した青少年支援団体です。</p>
-      <p>「心も身体も満ちて長ける」——この言葉を理念に、スポーツを入口とした<strong>心理的支援・居場所づくり</strong>を実践しています。</p>
-      <p>陸上競技という共通の体験を通じて、子どもたちが自分の可能性に気づき、社会とつながるきっかけをつくること。それがmichitakeの使命です。</p>
+<section class="sec" id="about">
+  <div class="about-grid">
+    <div class="reveal">
+      <div class="sec-num">01 / About</div>
+      <h2 class="sec-title">michitake<br/>とは。</h2>
     </div>
-    <div class="values">
-      <div class="value-item">
-        <div class="value-num">01</div>
-        <div class="value-title">スポーツ</div>
-        <div class="value-desc">陸上競技・運動プログラムを通じて、身体と心の成長を支える</div>
+    <div class="reveal d1">
+      <div class="sec-kicker">Our Purpose</div>
+      <div class="about-body">
+        <p>一般社団法人michitakeは、2024年12月に設立した青少年支援団体です。</p>
+        <p>「心も身体も満ちて長ける」——この言葉を理念に、スポーツを入口とした<strong>心理的支援・居場所づくり</strong>を実践しています。</p>
+        <p>陸上競技という共通の体験を通じて、子どもたちが自分の可能性に気づき、社会とつながるきっかけをつくること。それがmichitakeの使命です。</p>
       </div>
-      <div class="value-item">
-        <div class="value-num">02</div>
-        <div class="value-title">つながり</div>
-        <div class="value-desc">継続的な関係性と居場所をつくり、一人ひとりの自立を応援する</div>
+    </div>
+  </div>
+
+  <div class="values">
+    <div class="v reveal">
+      <div class="v-num">01</div>
+      <div>
+        <div class="v-title">スポーツ</div>
+        <div class="v-desc">陸上競技・運動プログラムを通じて、身体と心の成長を支える。</div>
       </div>
-      <div class="value-item">
-        <div class="value-num">03</div>
-        <div class="value-title">社会実装</div>
-        <div class="value-desc">研究知見と現場実践を接続し、支援の質を科学的に高めていく</div>
+    </div>
+    <div class="v reveal d1">
+      <div class="v-num">02</div>
+      <div>
+        <div class="v-title">つながり</div>
+        <div class="v-desc">継続的な関係性と居場所をつくり、一人ひとりの自立を応援する。</div>
+      </div>
+    </div>
+    <div class="v reveal d2">
+      <div class="v-num">03</div>
+      <div>
+        <div class="v-title">社会実装</div>
+        <div class="v-desc">研究知見と現場実践を接続し、支援の質を科学的に高めていく。</div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ACTIVITIES -->
-<section class="sec" id="activities">
-  <div class="sec-inner">
-    <div class="sec-label">Activities</div>
-    <h2 class="sec-title">活動内容</h2>
-    <p class="sec-lead">michitakeは現在、以下の活動を継続しています。</p>
-    <div class="act-grid">
-      <div class="act-item">
-        <div class="act-num">01</div>
-        <div>
-          <div class="act-badge">児童養護施設</div>
-          <div class="act-title">陸上教室（都内の児童養護施設）</div>
-          <div class="act-desc">都内の児童養護施設にて月1回の陸上教室を実施（2025年5月〜）。施設の子どもたちと一緒に走り、身体を動かす楽しさと達成感を共有します。</div>
-        </div>
-      </div>
-      <div class="act-item">
-        <div class="act-num">02</div>
-        <div>
-          <div class="act-badge">コミュニティ</div>
-          <div class="act-title">社会人ランニングコミュニティ</div>
-          <div class="act-desc">皇居周辺を拠点とした社会人ランニングコミュニティを運営。スポーツを通じた交流と居場所づくりを推進しています。</div>
-        </div>
-      </div>
-      <div class="act-item">
-        <div class="act-num">03</div>
-        <div>
-          <div class="act-badge">イベント</div>
-          <div class="act-title">陸上競技イベント参加</div>
-          <div class="act-desc">陸上競技イベントへの参加を通じて、スポーツの楽しさを広め、子どもたちや地域の方々と交流の場をつくっています。</div>
-        </div>
-      </div>
-      <div class="act-item">
-        <div class="act-num">04</div>
-        <div>
-          <div class="act-badge">サポート</div>
-          <div class="act-title">運動会サポート</div>
-          <div class="act-desc">施設や地域で行われる運動会の運営・進行をサポートします。子どもたちが安心して楽しめる場づくりに貢献します。</div>
-        </div>
-      </div>
+<section class="sec dark" id="activities">
+  <div class="sec-head reveal">
+    <div>
+      <div class="sec-num">02 / Activities</div>
+      <h2 class="sec-title">活動内容。</h2>
+      <div class="sec-kicker" style="margin-top:8px;">What We Do</div>
     </div>
+    <div class="sec-label">04 PROGRAMS</div>
+  </div>
+
+  <div class="acts">
+    <a href="#contact" class="act reveal">
+      <div class="act-top">
+        <div class="act-num">01</div>
+        <div class="act-badge">児童養護施設</div>
+      </div>
+      <div class="act-title">陸上教室<br/>（都内の児童養護施設）</div>
+      <div class="act-desc">月1回の陸上教室を実施（2025年5月〜）。施設の子どもたちと一緒に走り、身体を動かす楽しさと達成感を共有します。</div>
+      <div class="act-arrow">→</div>
+    </a>
+    <a href="#contact" class="act reveal d1">
+      <div class="act-top">
+        <div class="act-num">02</div>
+        <div class="act-badge">コミュニティ</div>
+      </div>
+      <div class="act-title">社会人ランニング<br/>コミュニティ</div>
+      <div class="act-desc">皇居周辺を拠点とした社会人ランニングコミュニティを運営。スポーツを通じた交流と居場所づくりを推進しています。</div>
+      <div class="act-arrow">→</div>
+    </a>
+    <a href="#contact" class="act reveal d2">
+      <div class="act-top">
+        <div class="act-num">03</div>
+        <div class="act-badge">イベント</div>
+      </div>
+      <div class="act-title">陸上競技<br/>イベント参加</div>
+      <div class="act-desc">陸上競技イベントへの参加を通じて、スポーツの楽しさを広め、子どもたちや地域の方々と交流の場をつくっています。</div>
+      <div class="act-arrow">→</div>
+    </a>
+    <a href="#contact" class="act reveal d3">
+      <div class="act-top">
+        <div class="act-num">04</div>
+        <div class="act-badge">サポート</div>
+      </div>
+      <div class="act-title">運動会<br/>サポート</div>
+      <div class="act-desc">施設や地域で行われる運動会の運営・進行をサポートします。子どもたちが安心して楽しめる場づくりに貢献します。</div>
+      <div class="act-arrow">→</div>
+    </a>
   </div>
 </section>
 
 <!-- PROFILE -->
-<section class="sec bg" id="profile">
-  <div class="sec-inner">
-    <div class="sec-label">Representative</div>
-    <h2 class="sec-title">代表理事</h2>
-    <div class="profile-card">
-      <div class="profile-avatar">宮</div>
-      <div>
-        <div class="profile-role">代表理事 / Representative Director</div>
-        <div class="profile-name">宮道 敬</div>
-        <div class="profile-en">Miyamichi Kei</div>
-        <div class="profile-desc">
-          中央大学経済学部・体育会陸上競技部を経て、金融ベンチャー企業に勤務。その後、青山学院大学で心理学を学び、無料塾の心理的意義を研究。現在は文教大学大学院 臨床心理学専攻（修士課程）に在籍しながら、「スポーツ×心理×福祉」を統合した若者支援モデルの社会実装に取り組む。
-        </div>
+<section class="sec" id="profile">
+  <div class="sec-head reveal">
+    <div>
+      <div class="sec-num">03 / Members</div>
+      <h2 class="sec-title">代表理事。</h2>
+      <div class="sec-kicker" style="margin-top:8px;">Representative Director</div>
+    </div>
+  </div>
+
+  <div class="profile-grid">
+    <div class="profile-photo reveal">PHOTO PLACEHOLDER</div>
+    <div class="profile reveal d1">
+      <div class="profile-role">Representative Director</div>
+      <div class="profile-name">宮道 敬</div>
+      <div class="profile-en">Miyamichi Kei</div>
+      <div class="profile-desc">
+        中央大学陸上競技部出身（短距離専門）。青山学院大学心理学科を卒業後、現在は文教大学大学院にて臨床心理学を専攻。トップアスリートと連携しながら、教育・心理・スポーツの観点から児童養護施設等での運動療育プログラムを展開し、若者の自立支援を行っている。
+      </div>
+      <div class="profile-tags">
+        <span>中央大学 陸上競技部</span>
+        <span>文教大学大学院 臨床心理学</span>
+        <span>短距離 / SPRINT</span>
       </div>
     </div>
+  </div>
+
+  <div class="members-soon reveal d2">
+    <b>その他のメンバー紹介</b>　COMING SOON ／ 順次公開予定
+  </div>
+</section>
+
+<!-- INSTAGRAM -->
+<section class="sec instagram-sec" id="instagram">
+  <div class="sec-head reveal">
+    <div>
+      <div class="sec-num">04 / Instagram</div>
+      <h2 class="sec-title">最新の活動。</h2>
+      <div class="sec-kicker" style="margin-top:8px;">Latest from @michitake_official</div>
+    </div>
+    <a href="https://www.instagram.com/michitake_official/" target="_blank" rel="noopener" class="sec-label ig-link">@michitake_official ↗</a>
+  </div>
+  <div class="ig-wrap reveal d1">
+    <iframe
+      src="https://www.instagram.com/michitake_official/embed/"
+      class="ig-embed"
+      frameborder="0"
+      scrolling="no"
+      allowtransparency="true"
+      loading="lazy"
+      title="michitake_official Instagram">
+    </iframe>
   </div>
 </section>
 
 <!-- CONTACT -->
-<div class="contact-cta" id="contact">
-  <div class="sec-inner">
-    <div class="sec-label">Contact</div>
-    <h2 class="sec-title">お問い合わせ</h2>
-    <p class="contact-desc">
-      活動へのご参加・ご支援・連携のご相談など、<br>
-      お気軽にご連絡ください。
-    </p>
-    <a href="mailto:michiru-takeru@michitake.com" class="contact-email">michiru-takeru@michitake.com</a>
+<section class="contact" id="contact">
+  <div class="contact-grid">
+    <div class="reveal">
+      <div class="sec-num">05 / Contact</div>
+      <h2>お問い合わせ。</h2>
+      <p>
+        活動へのご参加・ご支援・連携のご相談など、お気軽にご連絡ください。
+        施設関係者・パートナー企業・メディアの皆さまからのご連絡もお待ちしています。
+      </p>
+    </div>
+    <a href="mailto:michiru-takeru@michitake.com" class="contact-card reveal d1">
+      <div class="label">EMAIL US</div>
+      <div class="email">michiru-takeru@michitake.com</div>
+      <div class="arrow">→</div>
+    </a>
   </div>
-</div>
+</section>
 
 <!-- FOOTER -->
 <footer>
-  <img src="assets/logo.png" alt="michitake" class="footer-logo">
-  <div class="footer-links">
-    <a href="#about">michitakeとは</a>
-    <a href="#activities">活動内容</a>
-    <a href="#profile">代表</a>
-    <a href="#contact">お問い合わせ</a>
-    <a href="https://www.instagram.com/michitake_official/" target="_blank" rel="noopener">Instagram</a>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img src="assets/logo.png" alt="michitake" />
+      <div class="tag">心も身体も、<span class="em">満ちて長ける。</span></div>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>Sitemap</h4>
+        <ul>
+          <li><a href="#about">michitakeとは</a></li>
+          <li><a href="#activities">活動内容</a></li>
+          <li><a href="#profile">代表 / メンバー</a></li>
+          <li><a href="#instagram">Instagram</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://www.instagram.com/michitake_official/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="mailto:michiru-takeru@michitake.com">Email</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
-  <div class="footer-copy">© 2024 一般社団法人michitake. All Rights Reserved.</div>
+  <div class="footer-bottom">
+    <div>© 2024 一般社団法人 michitake. All Rights Reserved.</div>
+    <div>EST. 2024.12 ／ TOKYO, JAPAN</div>
+  </div>
 </footer>
 
-<script>
-// フェードイン
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.style.opacity = '1'; });
-}, { threshold: 0.1 });
-document.querySelectorAll('.sec-inner, .hero-inner').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transition = 'opacity .7s ease';
-  obs.observe(el);
-});
-</script>
-
+  <script src="script.js"></script>
 </body>
 </html>
